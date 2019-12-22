@@ -20,13 +20,15 @@ $(document).ready(function() {
             burger_name: $("#burger_name").val().trim()
         };
 
-        // Send the POST request.
-        $.ajax("/api/burgers", {
-            type: "POST",
-            data: newBurger
-        }).then(function() {
-            location.reload();
-        });
+        if (newBurger.burger_name) {
+            // Send the POST request.
+            $.ajax("/api/burgers", {
+                type: "POST",
+                data: newBurger
+            }).then(function() {
+                location.reload();
+            });
+        }
     });
 
     $(".restore-burgers").on("click", function(e) {
