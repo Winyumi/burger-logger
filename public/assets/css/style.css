@@ -19,7 +19,10 @@ a:hover {
     background-color: #c13925;
     border-color: #c13925;
 }
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:focus {
     background-color: #9e2b19;
     border-color: #9e2b19;
 }
