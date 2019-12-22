@@ -29,4 +29,4 @@ You can have your burger and eat it too! A simple app where you can add burgers 
 
 ## Preview
 
-Coming soon.
+![Burger Logger](readme_assets/preview.png)
