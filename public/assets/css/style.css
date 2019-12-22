@@ -1,1 +1,19 @@
-/* add your css here */
+@charset 'utf-8';
+
+a {
+    color: #c13925;
+}
+a:hover {
+    color: #852315;
+}
+.jumbotron {
+    background-color: #8a1400;
+}
+.btn-primary {
+    background-color: #c13925;
+    border-color: #c13925;
+}
+.btn-primary:hover {
+    background-color: #9e2b19;
+    border-color: #9e2b19;
+}
