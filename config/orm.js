@@ -25,6 +25,15 @@ const orm = {
       console.log(result);
       cb(result);
     });
+  },
+  updateAll: function(table, devoured, cb) {
+    devoured = devoured == "true";
+    var queryString = "UPDATE ?? SET devoured = ?";
+    connection.query(queryString, [table, devoured], function(err, result) {
+      if (err) throw err;
+      console.log(result);
+      cb(result);
+    });
   }
 };
 

@@ -28,4 +28,17 @@ $(document).ready(function() {
             location.reload();
         });
     });
+
+    $(".restore-burgers").on("click", function(e) {
+        e.preventDefault();
+
+        // Send the PUT request.
+        $.ajax("/api/burgers", {
+            type: "PUT",
+            data: { devoured: false }
+        }).then(function() {
+            location.reload();
+        });
+    });
+
 });
