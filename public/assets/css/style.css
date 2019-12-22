@@ -26,6 +26,9 @@ a:hover {
     background-color: #9e2b19;
     border-color: #9e2b19;
 }
+.add-burger .input-group {
+    max-width: 600px;
+}
 input#burger_name::placeholder {
     opacity: 1;
     transition: opacity 0.25s;
