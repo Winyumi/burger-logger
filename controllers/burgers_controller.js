@@ -8,10 +8,7 @@ var burger = require("../models/burger.js");
 // Routes
 router.get("/", function(req, res) {
   burger.all(function(data) {
-    var hbsObject = {
-      burgers: data
-    };
-    console.log(hbsObject);
+    var hbsObject = { burgers: data };
     res.render("index", hbsObject);
   });
 });

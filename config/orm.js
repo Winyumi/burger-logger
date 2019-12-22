@@ -18,7 +18,7 @@ const orm = {
     });
   },
   updateOne: function(table, id, devoured, cb) {
-    if (devoured == "true") devoured = 1;
+    devoured = devoured == "true";
     var queryString = "UPDATE ?? SET devoured = ? WHERE id = ?";
     connection.query(queryString, [table, devoured, id], function(err, result) {
       if (err) throw err;
