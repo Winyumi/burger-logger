@@ -1,42 +1,45 @@
-<h1>Burgers</h1>
+<div class="jumbotron text-center">
+    <h1 class="d-none">Burger Logger</h1>
+    <img src="/assets/images/burger.png" alt="Burger">
 
-<img src="/assets/images/burger.png" alt="Burger">
+    <form class="add-burger">
+        <div class="input-group mx-auto w-75 mt-3">
+            <input type="text" class="form-control" id="burger_name" name="burger_name" placeholder="Enter name of burger">
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary">Add Burger</button>
+            </span>
+        </div>
+    </form>
+</div>
 
-<h2>Menu</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md text-center">
+            <h2>Menu</h2>
+            {{#each burgers}}
+                {{#unless devoured}}
+                    <p>
+                        {{ burger_name }}<br>
+                        <button class="devour btn btn-primary" data-id="{{ id }}">Devour it!</button>
+                        <button class="remove btn btn-danger" data-id="{{ id }}"><i class="fas fa-trash-alt"></i></button>
+                    </p>
+                {{/unless}}
+            {{/each}}
+        </div>
 
-<ul>
-{{#each burgers}}
-    {{#unless devoured}}
-        <li>
-            {{ id }}. {{ burger_name }}<br>
-            <button class="devour" data-id="{{ id }}">Devour it!</button>
-            <button class="remove" data-id="{{ id }}">Remove</button>
-        </li>
-    {{/unless}}
-{{/each}}
-</ul>
-
-<h2>Devoured</h2>
-
-<ul>
-{{#each burgers}}
-    {{#if devoured}}
-        <li>
-            {{ id }}. {{ burger_name }}<br>
-            <button class="remove" data-id="{{ id }}">Remove</button>
-        </li>
-    {{/if}}
-{{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="add-burger">
-    <div class="form-group">
-        <label for="burger_name">Burger Name:</label>
-        <input type="text" id="burger_name" name="burger_name">
+        <div class="col-md text-center">
+            <h2>Devoured</h2>
+            {{#each burgers}}
+                {{#if devoured}}
+                    <p>
+                        {{ burger_name }} <button class="remove btn btn-danger" data-id="{{ id }}"><i class="fas fa-trash-alt"></i></button>
+                    </p>
+                {{/if}}
+            {{/each}}
+        </div>
     </div>
+</div>
 
-    <button type="submit">Add Burger</button>
-</form>
-
-<button class="restore-burgers">Restore Burgers</button>
+<div class="text-center mt-5 mb-5">
+    <button class="restore-burgers btn btn-light">Undevour Burgers</button>
+</div>
