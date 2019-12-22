@@ -33,3 +33,13 @@ input#burger_name::placeholder {
 input#burger_name:focus::placeholder {
     opacity: 0;
 }
+.remove {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+.card:hover .remove {
+    opacity: 1;
+}
