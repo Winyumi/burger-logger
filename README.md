@@ -4,6 +4,8 @@
 
 You can have your burger and eat it too! A simple app where you can add burgers to a list and devour those burgers with a click of a button.
 
+This app runs on `express`, `express-handlebars`, and `mysql` Node.js modules.
+
 [Live Demo](https://nameless-mountain-76205.herokuapp.com/)
 
 *Disclaimer: Please note this live demo is a public web app. The names of burgers expressed in this live demo are those of the author and do not necessarily reflect the views or opinions of the creator(s) of this web app. If you see any burger names that are suspect to be malicious or hateful, please take the initative and remove those burgers.*
