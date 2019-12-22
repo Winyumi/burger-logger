@@ -10,6 +10,7 @@
         <li>
             {{ id }}. {{ burger_name }}<br>
             <button class="devour" data-id="{{ id }}">Devour it!</button>
+            <button class="remove" data-id="{{ id }}">Remove</button>
         </li>
     {{/unless}}
 {{/each}}
@@ -21,7 +22,8 @@
 {{#each burgers}}
     {{#if devoured}}
         <li>
-            {{ id }}. {{ burger_name }}
+            {{ id }}. {{ burger_name }}<br>
+            <button class="remove" data-id="{{ id }}">Remove</button>
         </li>
     {{/if}}
 {{/each}}

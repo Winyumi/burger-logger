@@ -41,4 +41,16 @@ $(document).ready(function() {
         });
     });
 
+    $(".remove").on("click", function(e) {
+        e.preventDefault();
+        var id = $(this).data("id");
+
+        // Send the DELETE request.
+        $.ajax("/api/burgers/" + id, {
+            type: "DELETE"
+        }).then(function() {
+            location.reload();
+        });
+    });
+
 });

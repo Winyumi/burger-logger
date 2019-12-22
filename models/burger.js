@@ -21,6 +21,11 @@ var burger = {
     orm.updateAll("burgers", devoured, function(result) {
       cb(result);
     });
+  },
+  delete: function(id, cb) {
+    orm.deleteOne("burgers", id, function(result) {
+      cb(result);
+    });
   }
 };
 
