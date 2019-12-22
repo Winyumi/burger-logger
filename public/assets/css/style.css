@@ -26,3 +26,10 @@ a:hover {
     background-color: #9e2b19;
     border-color: #9e2b19;
 }
+input#burger_name::placeholder {
+    opacity: 1;
+    transition: opacity 0.25s;
+}
+input#burger_name:focus::placeholder {
+    opacity: 0;
+}
