@@ -9,17 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Winyumi/node-express-handlebars.git"
+    "url": "git+https://github.com/Winyumi/burger-logger.git"
   },
   "author": "Winson Quon",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Winyumi/node-express-handlebars/issues"
+    "url": "https://github.com/Winyumi/burger-logger/issues"
   },
-  "homepage": "https://github.com/Winyumi/node-express-handlebars#readme",
+  "homepage": "https://github.com/Winyumi/burger-logger#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1"
-  }
+  },
+  "devDependencies": {}
 }
