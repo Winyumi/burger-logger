@@ -15,6 +15,9 @@ a:hover {
 .jumbotron {
     background-color: #8a1400;
 }
+.row > div {
+    margin-bottom: 1.5em;
+}
 .btn-primary {
     background-color: #c13925;
     border-color: #c13925;
